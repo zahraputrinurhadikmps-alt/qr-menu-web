@@ -1,9 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>QR Menu</title>
+    <meta charset="UTF-8">
+    <title>Menu Informasi Sains Data</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>QR Menu Jalan</h1>
+
+<div class="container">
+    <h1>📊 Sains Data</h1>
+    <p>Universitas PGRI Sumatera Barat</p>
+
+    <div class="menu">
+        <button onclick="showContent('profil')">Profil Prodi</button>
+        <button onclick="showContent('visi')">Visi</button>
+        <button onclick="showContent('misi')">Misi</button>
+        <button onclick="showContent('karier')">Prospek Karier</button>
+    </div>
+
+    <div id="content" class="content-box">
+        <p>Silakan pilih menu di atas</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+<h3>Scan QR</h3>
+<div id="qrcode"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script src="script.js"></script>
