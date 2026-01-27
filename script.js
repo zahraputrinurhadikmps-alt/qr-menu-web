@@ -5,8 +5,9 @@ function showContent(menu) {
     content.innerHTML = `
       <h3>Profil Program Studi</h3>
       <p>
-        Program Studi Sains Data berada di Fakultas Sains dan Teknologi
-        Universitas PGRI Sumatera Barat.
+        Program Studi Sains Data merupakan salah satu 
+        program studi di Fakultas Sains dan Teknologi Universitas PGRI Sumatera Barat
+        yang berdiri berdasarkan Surat Keputusan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi tanggal 3 November 2021
       </p>`;
   }
 
@@ -14,7 +15,8 @@ function showContent(menu) {
     content.innerHTML = `
       <h3>Visi</h3>
       <p>
-        Menjadi program studi unggul dan kompetitif di bidang Sains Data.
+        Menjadi program studi yang menghasilkan lulusan yang unggul di bidang sains data artificial intelligence
+        yang inovatif dan kompetitif di tingkat nasional tahun 2051.
       </p>`;
   }
 
@@ -22,9 +24,9 @@ function showContent(menu) {
     content.innerHTML = `
       <h3>Misi</h3>
       <ul>
-        <li>Pendidikan berbasis teknologi</li>
-        <li>Pengembangan riset</li>
-        <li>Kerja sama industri</li>
+        <li>Menghasilkan lulusan yang ahli dalam analisis Big Data dan Artificial Intelligence.</li>
+        <li>Mengembangkan sistem otomatisasi dan pertukaran data yang adaptif terhadap tren teknologi.</li>
+        <li>Meningkatkan literasi data bagi masyarakat, industri, dan pemangku kebijakan melalui solusi</li>
       </ul>`;
   }
 
@@ -46,8 +48,8 @@ function showContent(menu) {
 
   else if (menu === "brosur") {
     content.innerHTML = `
-      <h3>Promosi Program Studi</h3>
-      <a href="assets/brosur-sains-data.pdf" target="_blank">
+      <h3>Brosur Program Studi</h3>
+      <a href="assets/pmb-bg.jpg.jpeg" target="_blank">
         📄 Lihat Brosur Sains Data
       </a>`;
   }
@@ -55,11 +57,13 @@ function showContent(menu) {
   else if (menu === "peluang") {
     content.innerHTML = `
       <h3>Peluang Kerja</h3>
-      <p>
-        Lulusan Sains Data memiliki peluang kerja luas
-        di sektor industri, pemerintahan, startup,
-        dan perusahaan teknologi.
-      </p>`;
+      <ul>
+        <li>Lembaga pemerintahan</li>
+        <li>Industri/perusahaan (perusahaan swasta, perusahaan nasional,
+        perusahaan multinasional, perusahaan rintisan (start up company) dan UMKM</li>
+        <li>Organisasi nirbala, institusi/organisasi multilateral</li>
+        <li>BUMN, BUMD</li>
+      </ul>`;
   }
 
   else if (menu === "kerja") {
@@ -70,6 +74,12 @@ function showContent(menu) {
         <li>Data Scientist</li>
         <li>Business Intelligence</li>
         <li>Machine Learning Engineer</li>
+        <li>Artificial Intelligence Engineer</li>
+        <li>Data Engineer</li>
+        <li>Programmer/Developer</li>
+        <li>Konsultan Data</li>
+
+
       </ul>`;
   }
 
