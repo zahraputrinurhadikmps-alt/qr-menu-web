@@ -77,7 +77,7 @@ p {
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* MOBILE */
+/* MOBILE FIX — TIDAK GANTI DESAIN */
 @media (max-width: 768px) {
   h1 {
     font-size: 22px;
