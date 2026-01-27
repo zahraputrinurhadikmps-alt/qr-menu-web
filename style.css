@@ -13,6 +13,20 @@ body {
   max-width: 420px;
   margin: auto;
   padding: 16px;
+
+  /* BACKGROUND GAMBAR */
+  background-image: url("assets/pmb-bg.jpg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+  /* biar teks kebaca di atas gambar */
+  background-blend-mode: overlay;
+  background-color: rgba(0,0,0,0.45);
+
+  border-radius: 12px;
 }
 
 /* MENU */
@@ -32,7 +46,8 @@ body {
   font-size: 16px;
   border: none;
   border-radius: 10px;
-  background: #0d6efd;
+
+  background: rgba(13,110,253,0.9);
   color: white;
 }
 
@@ -40,7 +55,8 @@ body {
 .content-box {
   margin-top: 16px;
   padding: 14px;
-  background: white;
+
+  background: rgba(255,255,255,0.9);
   border-radius: 10px;
 }
 
