@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Menu Informasi Sains Data</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Informasi Sains Data</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
 <div class="container">
-    <h1>📊 Sains Data</h1>
-    <p>Universitas PGRI Sumatera Barat</p>
 
-    <div class="menu">
-        <button onclick="showContent('profil')">Profil Prodi</button>
-        <button onclick="showContent('visi')">Visi</button>
-        <button onclick="showContent('misi')">Misi</button>
-        <button onclick="showContent('karier')">Prospek Karier</button>
-    </div>
+  <h1>📊 Sains Data</h1>
+  <p>Universitas PGRI Sumatera Barat</p>
 
-    <div id="content" class="content-box">
-        <p>Silakan pilih menu di atas</p>
-    </div>
+  <div class="qr-container">
+    <h2>Scan Menu</h2>
+    <img
+      src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://zahraputrinurhadikmps-alt.github.io/qr-menu-web/"
+      alt="QR Menu">
+    <p>Scan QR untuk melihat menu</p>
+  </div>
+
+  <div class="menu">
+    <button onclick="showContent('profil')">Profil Program Studi</button>
+    <button onclick="showContent('visi')">Visi</button>
+    <button onclick="showContent('misi')">Misi</button>
+    <button onclick="showContent('matkul')">Mata Kuliah</button>
+    <button onclick="showContent('brosur')">Promosi Prodi</button>
+    <button onclick="showContent('peluang')">Peluang Kerja</button>
+    <button onclick="showContent('kerja')">Lingkup Dunia Kerja</button>
+  </div>
+
+  <div id="content" class="content-box">
+    <p>Silakan pilih menu di atas</p>
+  </div>
+
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
 
-<h3>Scan QR</h3>
-<div id="qrcode"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-<script src="script.js"></script>
