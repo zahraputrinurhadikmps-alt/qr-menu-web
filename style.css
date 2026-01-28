@@ -79,7 +79,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 /* BUTTON MENU */
@@ -104,6 +104,7 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 300px;
+  margin-top: 4px;
 }
 
 .content-box > *:not(.back) {
@@ -204,7 +205,7 @@ p {
 
   .menu {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 8px;4
     margin-bottom: 12px;
   }
 
