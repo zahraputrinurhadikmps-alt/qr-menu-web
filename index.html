@@ -1,44 +1,37 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Informasi Sains Data</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+function showContent(id) {
+  // sembunyikan semua konten
+  const allContent = document.querySelectorAll(".content-box");
+  allContent.forEach(box => box.classList.add("hidden"));
 
-<body>
-<div class="container">
+  // sembunyikan MENU
+  const menu = document.querySelector(".menu");
+  if (menu) menu.style.display = "none";
 
-  <h1>📊 Program Studi Sains Data</h1>
-<p>Bersama Universitas PGRI Sumatera Barat, Wujudkan Karier di Era Digital</p>
+  // tampilkan konten yang dipilih
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.remove("hidden");
+  }
 
+  // scroll ke atas
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 
+function backToMenu() {
+  // sembunyikan semua konten
+  const allContent = document.querySelectorAll(".content-box");
+  allContent.forEach(box => box.classList.add("hidden"));
 
-  <div class="qr-container">
-    <h2>Scan Menu</h2>
-    <img
-      src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://zahraputrinurhadikmps-alt.github.io/qr-menu-web/"
-      alt="QR Menu">
-    <p>Scan QR untuk melihat menu</p>
-  </div>
+  // tampilkan MENU lagi
+  const menu = document.querySelector(".menu");
+  if (menu) menu.style.display = "grid";
 
-  <div class="menu">
-    <button onclick="showContent('profil')">Profil Program Studi</button>
-    <button onclick="showContent('visi')">Visi</button>
-    <button onclick="showContent('misi')">Misi</button>
-    <button onclick="showContent('matkul')">Mata Kuliah</button>
-    <button onclick="showContent('brosur')">Brosur Program Studi</button>
-    <button onclick="showContent('peluang')">Peluang Kerja</button>
-    <button onclick="showContent('kerja')">Lingkup Dunia Kerja</button>
-  </div>
-
-  <div id="content" class="content-box">
-    <p>Silakan pilih menu di atas</p>
-  </div>
-
-</div>
-
-<script src="script.js?v=5"></script>
-</body>
-</html>
+  // scroll ke atas
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
