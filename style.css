@@ -1,0 +1,232 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #111;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER = POSTER */
+.container {
+  width: 100%;
+  max-width: 390px;
+
+  aspect-ratio: 9 / 16; /* IKUT GAMBAR */
+  padding: 20px;
+
+  background-image: url("./assets/latar-bg.png.jpg");
+  background-size: contain;      /* GAMBAR UTUH */
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* OVERLAY BIAR TEKS KEBACA */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 0;
+}
+
+/* SEMUA ISI DI ATAS OVERLAY */
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* JUDUL */
+h1 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+p {
+  color: #f1f1f1;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* QR */
+.qr-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.qr-container h2,
+.qr-container p {
+  color: #000;
+}
+
+/* MENU - 2 KOLOM */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* BUTTON MENU */
+.menu button {
+  background: #ffffff;
+  color: #0d6efd;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* CONTENT BOX */
+.content-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  color: #000;
+}
+
+.content-box h3 {
+  color: #0d6efd;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.content-box p {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.content-box ul {
+  margin-left: 20px;
+}
+
+.content-box li {
+  color: #333;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.content-box a {
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+
+.sub-btn {
+  background: #f0f0f0;
+  color: #0d6efd;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 8px;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+/* SEMBUNYI */
+.hidden {
+  display: none;
+}
+
+/* TOMBOL KEMBALI */
+.back {
+  margin-top: 14px;
+  width: 100%;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+/* RESPONSIVE MOBILE */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .menu button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .qr-container {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .content-box {
+    padding: 15px;
+  }
+
+  .content-box h3 {
+    font-size: 16px;
+  }
+
+  .content-box p,
+  .content-box li {
+    font-size: 13px;
+  }
+
+  .sub-btn {
+    width: 100%;
+  }
+}
+
+/* RESPONSIVE TABLET */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .container {
+    max-width: 390px;
+  }
+}
