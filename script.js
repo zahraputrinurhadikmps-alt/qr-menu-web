@@ -1,105 +1,55 @@
-function showContent(menu) {
-  const content = document.getElementById("content");
+function showContent(id) {
+  // sembunyikan semua konten
+  const allContent = document.querySelectorAll(".content-box");
+  allContent.forEach(box => box.classList.add("hidden"));
 
-  if (menu === "profil") {
-    content.innerHTML = `
-      <h3>Profil Program Studi</h3>
-      <p>
-        Program Studi Sains Data merupakan salah satu 
-        program studi di Fakultas Sains dan Teknologi Universitas PGRI Sumatera Barat
-        yang berdiri berdasarkan Surat Keputusan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi tanggal 3 November 2021
-      </p>`;
+  // sembunyikan MENU
+  const menu = document.querySelector(".menu");
+  if (menu) menu.style.display = "none";
+
+  // tampilkan konten yang dipilih
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.remove("hidden");
   }
 
-  else if (menu === "visi") {
-    content.innerHTML = `
-      <h3>Visi</h3>
-      <p>
-        Menjadi program studi yang menghasilkan lulusan yang unggul di bidang sains data artificial intelligence
-        yang inovatif dan kompetitif di tingkat nasional tahun 2051.
-      </p>`;
-  }
-
-  else if (menu === "misi") {
-    content.innerHTML = `
-      <h3>Misi</h3>
-      <ul>
-        <li>Menghasilkan lulusan yang ahli dalam analisis Big Data dan Artificial Intelligence.</li>
-        <li>Mengembangkan sistem otomatisasi dan pertukaran data yang adaptif terhadap tren teknologi.</li>
-        <li>Meningkatkan literasi data bagi masyarakat, industri, dan pemangku kebijakan melalui solusi</li>
-      </ul>`;
-  }
-
-  else if (menu === "matkul") {
-    content.innerHTML = `
-      <h3>Mata Kuliah</h3>
-
-      <button class="sub-btn" onclick="showMatkul('diskrit')">
-        📘 Matematika Diskrit
-      </button>
-
-      <button class="sub-btn" onclick="showMatkul('algo')">
-        💻 Algoritma dan Pemrograman
-      </button>
-
-      <div id="matkul-content" style="margin-top:10px;"></div>
-    `;
-  }
-
-  else if (menu === "brosur") {
-    content.innerHTML = `
-      <h3>Brosur Program Studi</h3>
-      <a href="assets/pmb-bg.jpg.jpeg" target="_blank">
-        📄 Lihat Brosur Sains Data
-      </a>`;
-  }
-
-  else if (menu === "peluang") {
-    content.innerHTML = `
-      <h3>Peluang Kerja</h3>
-      <ul>
-        <li>Lembaga pemerintahan</li>
-        <li>Industri/perusahaan (perusahaan swasta, perusahaan nasional,
-        perusahaan multinasional, perusahaan rintisan (start up company) dan UMKM</li>
-        <li>Organisasi nirbala, institusi/organisasi multilateral</li>
-        <li>BUMN, BUMD</li>
-      </ul>`;
-  }
-
-  else if (menu === "kerja") {
-    content.innerHTML = `
-      <h3>Lingkup Dunia Kerja</h3>
-      <ul>
-        <li>Data Analyst</li>
-        <li>Data Scientist</li>
-        <li>Business Intelligence</li>
-        <li>Machine Learning Engineer</li>
-        <li>Artificial Intelligence Engineer</li>
-        <li>Data Engineer</li>
-        <li>Programmer/Developer</li>
-        <li>Konsultan Data</li>
-
-
-      </ul>`;
-  }
-
-  else {
-    content.innerHTML = `<p>Menu belum tersedia.</p>`;
-  }
+  // scroll ke atas
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
+
+function backToMenu() {
+  // sembunyikan semua konten
+  const allContent = document.querySelectorAll(".content-box");
+  allContent.forEach(box => box.classList.add("hidden"));
+
+  // tampilkan MENU lagi
+  const menu = document.querySelector(".menu");
+  if (menu) menu.style.display = "grid";
+
+  // scroll ke atas
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
 
 function showMatkul(type) {
   const area = document.getElementById("matkul-content");
+  if (!area) return;
 
   if (type === "diskrit") {
     area.innerHTML = `
       <h4>Matematika Diskrit</h4>
       <p>
-        Matematika Diskrit membahas struktur diskrit
-        seperti logika, himpunan, relasi, graf,
-        dan digunakan sebagai dasar pemrograman,
-        algoritma, dan kecerdasan buatan.
-      </p>`;
+        Matematika Diskrit membahas struktur diskrit seperti
+        logika, himpunan, relasi, graf, dan digunakan sebagai
+        dasar algoritma, pemrograman, serta kecerdasan buatan.
+      </p>
+    `;
   }
 
   else if (type === "algo") {
@@ -109,6 +59,7 @@ function showMatkul(type) {
         Mata kuliah ini membahas konsep algoritma,
         logika pemrograman, dan implementasi dasar
         menggunakan bahasa pemrograman.
-      </p>`;
+      </p>
+    `;
   }
 }
