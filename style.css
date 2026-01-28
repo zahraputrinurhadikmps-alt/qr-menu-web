@@ -13,33 +13,32 @@ body {
   justify-content: center;
 }
 
-/* CONTAINER = POSTER */
+/* CONTAINER */
 .container {
   width: 100%;
   max-width: 390px;
-
-  aspect-ratio: 9 / 16; /* IKUT GAMBAR */
+  min-height: 100vh;
   padding: 20px;
 
-  background-image: url("./assets/latar-bg.png.jpg");
-  background-size: contain;      /* GAMBAR UTUH */
-  background-position: center top;
+  background-image: url("assets/latar-bg.png.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
   position: relative;
   overflow: hidden;
 }
 
-/* OVERLAY BIAR TEKS KEBACA */
+/* OVERLAY */
 .container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.35);
   z-index: 0;
 }
 
-/* SEMUA ISI DI ATAS OVERLAY */
+/* ISI DI ATAS OVERLAY */
 .container > * {
   position: relative;
   z-index: 1;
@@ -69,22 +68,16 @@ p {
   margin-bottom: 14px;
 }
 
-.qr-container h2,
-.qr-container p {
-  color: #000;
-}
-
-/* MENU - 2 KOLOM */
+/* MENU */
 .menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin-bottom: 12px;
 }
 
-/* BUTTON MENU */
+/* BUTTON */
 .menu button {
-  background: #ffffff;
+  background: #fff;
   color: #0d6efd;
   padding: 10px;
   border-radius: 12px;
@@ -92,16 +85,14 @@ p {
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  text-align: center;
 }
 
-
-/* SEMBUNYI */
+/* HIDDEN */
 .hidden {
   display: none;
 }
 
-/* TOMBOL KEMBALI */
+/* BACK */
 .back {
   margin-top: 14px;
   width: 100%;
