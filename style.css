@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* RESET */
 * {
   box-sizing: border-box;
@@ -165,6 +164,7 @@ p {
   border-radius: 12px;
   cursor: pointer;
 }
+
 /* RESPONSIVE MOBILE */
 @media (max-width: 480px) {
   .container {
@@ -231,110 +231,3 @@ p {
     max-width: 390px;
   }
 }
-=======
-/* RESET */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* BODY */
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #111;
-  display: flex;
-  justify-content: center;
-}
-
-/* CONTAINER */
-.container {
-  width: 100%;
-  max-width: 390px;
-  min-height: 100vh;
-  padding: 20px;
-
-  background-image: url("assets/latar-bg.png.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  position: relative;
-  overflow: hidden;
-}
-
-/* OVERLAY */
-.container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 0;
-}
-
-/* ISI DI ATAS OVERLAY */
-.container > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* JUDUL */
-h1 {
-  color: #fff;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 6px;
-}
-
-p {
-  color: #f1f1f1;
-  font-size: 13px;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-/* QR */
-.qr-container {
-  background: #fff;
-  border-radius: 16px;
-  padding: 12px;
-  text-align: center;
-  margin-bottom: 14px;
-}
-
-/* MENU */
-.menu {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-/* BUTTON */
-.menu button {
-  background: #fff;
-  color: #0d6efd;
-  padding: 10px;
-  border-radius: 12px;
-  border: none;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* HIDDEN */
-.hidden {
-  display: none;
-}
-
-/* BACK */
-.back {
-  margin-top: 14px;
-  width: 100%;
-  background: #0d6efd;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 12px;
-  cursor: pointer;
-}
->>>>>>> 2ff7764ac1daf83111cf7c63ae2507c0bc9b81c5
