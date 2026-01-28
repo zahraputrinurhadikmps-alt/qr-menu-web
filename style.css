@@ -101,6 +101,18 @@ p {
   border-radius: 12px;
   padding: 20px;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.content-box > *:not(.back) {
+  flex-grow: 1;
+}
+
+.content-box .back {
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 .content-box h3 {
@@ -155,14 +167,23 @@ p {
 
 /* TOMBOL KEMBALI */
 .back {
-  margin-top: 14px;
+  margin-top: 20px;
   width: 100%;
   background: #0d6efd;
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 12px;
   border-radius: 12px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* RESPONSIVE MOBILE */
@@ -221,6 +242,12 @@ p {
   .sub-btn {
     width: 100%;
     font-size: 12px;
+  }
+
+  .back {
+    margin-top: 16px;
+    padding: 10px;
+    font-size: 13px;
   }
 }
 
